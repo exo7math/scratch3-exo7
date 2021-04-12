@@ -117,7 +117,7 @@ Nous avons bénéficié du soutien de l'université de Lille, de la COMUE Lille 
 ![Logo Exo7](divers/logo_exo7.png "logo Exo7")
 ![Logo IREM](divers/logo-irem-144.png "logo IREM")
 
-![Logo Lille](divers/Logo-Univ-Lille1.png "logo Lille")
+![Logo Lille](divers/Logo-Univ-Lille.png "logo Lille")
 ![Logo Google](divers/logo-google.png "logo Google")
 
 
