@@ -1,0 +1,164 @@
+\documentclass[class=report,crop=false, 12pt]{standalone}
+\usepackage[screen,nosolutions]{../myscratch}
+%\usepackage[screen]{../myscratch}
+
+\begin{document}
+
+\titre[S]{Répéter}
+%===============================
+
+\insertvideo{iWEGE7JnVAI}{Répéter -- Activité 1}
+
+\insertvideo{DfXBBizL1YE}{Répéter -- Activité 2}
+
+\insertvideo{VddWNA1gNP8}{Répéter -- Activité 3}
+
+\bigskip
+\bigskip
+
+
+\begin{activite}
+Trace un escalier, comme sur cette figure. À chaque marche, Scratch monte de 10 puis avance de 20.
+
+\begin{center}
+  \includegraphics[width=0.6\textwidth]{ecran-02-ex1}   
+\end{center}
+
+\textbf{Blocs utiles.}
+\begin{itemize}
+  \item Le bloc le plus utile sera le bloc \og{}répéter 10 fois\fg{}. Toutes les instructions placées à l'intérieur de ce bloc seront répétées 10 fois.
+  
+\begin{center}
+\begin{scratch}
+  \blockrepeat{répéter \ovalnum{10} fois}
+  {
+    \blockspace[1]
+  }
+\end{scratch}
+\end{center} 
+  
+  \item Autres blocs déjà vus : \og{}s’orienter à 0\textdegree\fg{} (vers le haut), \og{}s’orienter à 90\textdegree\fg{} (vers la droite)...
+Et aussi \og{}aller à $x:0$, $y:0$\fg{}, \og{}effacer tout\fg{}, \og{}stylo en position d’écriture\fg{}, \og{}attendre 1 seconde\fg{}...
+\end{itemize}
+
+\end{activite}
+
+
+\begin{activite}
+Trace un polygone comme sur la figure suivante. Change de couleur à chaque côté. 
+\begin{center}
+  \includegraphics[width=0.32\textwidth]{ecran-02-ex2}   
+\end{center}
+
+
+\textbf{Blocs utiles.}
+\begin{itemize}
+  \item \og{}tourner à gauche de 45\textdegree\fg{}
+  \item \og{}ajouter 10 à la couleur du stylo\fg{}
+\end{itemize}
+\end{activite}
+
+
+\begin{activite}
+Trace des escaliers comme sur la figure.
+\begin{center}
+  \includegraphics[width=0.47\textwidth]{ecran-02-ex3}   
+\end{center}
+
+\begin{itemize}
+  \item On répète trois fois : le chat monte de 10 puis avance de  10 (escalier bleu).
+  \item On répète trois fois  : le chat descend de 10 puis avance de  10  (escalier rouge).
+  \item On répète ces deux opérations trois fois.
+  \item De plus, tu peux changer la couleur du trait et afficher la valeur de l'abscisse $x$ de Scratch lorsqu'il s'arrête.
+\end{itemize}
+
+\bigskip
+
+\textbf{Blocs utiles.}
+{
+\setscratch{scale=0.8}
+On obtient le bloc 
+\begin{scratch}
+\blocklook{dire \ovalmove{ abscisse x}}
+\end{scratch}
+en insérant le bloc \ovalmove{ abscisse x} à la place de \og{}Bonjour!\fg{} par un \og{}cliqué-déposé\fg{} dans le bloc : 
+\begin{scratch}
+\blocklook{dire \ovalnum{ Bonjour!}}
+\end{scratch}
+}
+
+\end{activite}
+
+\ifx \displaysolutions \myzero
+\else
+\begin{code}
+\setscratch{scale=\scalesolution}
+\onesolution{Répéter}{Activité 1}{
+\begin{scratch}
+  \blockinit{quand \greenflag est cliqué}
+  \blockmove{aller à x: \ovalnum{0} y: \ovalnum{0}}
+  \blockmove{s'orienter à \ovalnum{90}}
+  \blockpen{effacer tout}
+  \blockpen{stylo en position d'écriture}
+
+  \blockrepeat{répéter \ovalnum{10} fois}
+  {
+    \blockmove{s'orienter à \ovalnum{0}}
+    \blockmove{avancer de \ovalnum{10} pas} 
+    \blockmove{s'orienter à \ovalnum{90}}
+    \blockmove{avancer de \ovalnum{20} pas} 
+    \blockcontrol{attendre \ovalnum{1} secondes} 
+  } 
+\end{scratch}
+} 
+\onesolution{Répéter}{Activité 2}{
+\begin{scratch}
+  \blockinit{quand \greenflag est cliqué}
+  \blockmove{aller à x: \ovalnum{0} y: \ovalnum{0}}
+  \blockmove{s'orienter à \ovalnum{90}}
+  \blockpen{effacer tout}
+  \blockpen{stylo en position d'écriture}
+
+  \blockrepeat{répéter \ovalnum{8} fois}
+  {
+    \blockmove{avancer de \ovalnum{50} pas} 
+    \blockmove{tourner \turnleft{} de \ovalnum{45} degrés}
+    \blockpen{ajouter \ovalnum{10} à la \selectmenu{couleur} du stylo}
+    \blockcontrol{attendre \ovalnum{1} secondes} 
+  } 
+\end{scratch}
+}
+\onesolution{Répéter}{Activité 3}{
+\begin{scratch}
+  \blockinit{quand \greenflag est cliqué}
+  \blockmove{aller à x: \ovalnum{0} y: \ovalnum{0}}
+  \blockmove{s'orienter à \ovalnum{90}}
+  \blockpen{effacer tout}
+  \blockpen{stylo en position d'écriture}
+  \blockrepeat{répéter \ovalnum{3} fois}
+  {
+    \blockpen{mettre la couleur du stylo à \pencolor{blue!75!black}}
+    \blockrepeat{répéter \ovalnum{3} fois}
+	{
+	  \blockmove{s'orienter à \ovalnum{0}}
+	  \blockmove{avancer de \ovalnum{10} pas} 
+	  \blockmove{s'orienter à \ovalnum{90}}
+	  \blockmove{avancer de \ovalnum{10} pas} 
+	}
+    \blockpen{mettre la couleur du stylo à \pencolor{red!75!black}}
+	\blockrepeat{répéter \ovalnum{3} fois}
+	{
+	  \blockmove{s'orienter à \ovalnum{180}}
+	  \blockmove{avancer de \ovalnum{10} pas} 
+	  \blockmove{s'orienter à \ovalnum{90}}
+	  \blockmove{avancer de \ovalnum{10} pas} 
+	}
+  } 
+  \blocklook{dire \ovalmove{ abscisse x}}
+\end{scratch}
+}
+\end{code}
+\fi
+
+\end{document}
+

@@ -1,0 +1,127 @@
+\documentclass[class=report,crop=false, 12pt]{standalone}
+\usepackage[screen]{../myscratch}
+
+\begin{document}
+
+
+\titre[E]{Entrée/Sortie}
+%===============================
+
+
+\begin{enigme}
+
+Scratch termine le script suivant en disant \og $28118$ \fg{}.
+
+\begin{center}
+\begin{scratch}
+  \blockinit{quand \greenflag est cliqué}
+  \blocksensing{demander \ovalnum{Quel entier ?} et attendre}
+  \blocklook{dire \ovaloperator{ \ovalnum{153} + \ovaloperator{\ovalnum{17} * \ovalsensing{réponse}}}}
+\end{scratch} 
+\end{center}
+
+
+\bigskip
+
+\textbf{Question.} Quel entier l'utilisateur a t-il saisi en entrée ?
+
+\bigskip
+
+\textbf{Bonus.} Quelle machine a été inventée cette année-là ?
+
+%\begin{solution}
+%$1645$, date de création de la pascaline.
+%\end{solution}
+
+\end{enigme}
+
+
+
+\begin{enigme}
+
+Pour dessiner ce chiffre \og 4 \fg{}, tu peux donner à Scratch une suite d'instructions en tapant des lettres au clavier.
+
+\myfigure{0.55}{
+\tiny  \tikzinput{figure-05-eg2}
+} 
+
+Voici comment Scratch réagit lorsqu'une touche est tapée : 
+\begin{itemize}
+  \item la touche \mot{h} ajoute $60$ à $x$,
+  \item la touche \mot{p} retire $100$ à $x$,
+  \item la touche \mot{y} ajoute $110$ à $y$,
+  \item la touche \mot{n} retire $170$ à $y$,  
+  \item la touche \mot{o} place le stylo en position d'écriture,
+  \item la touche \mot{t} relève le stylo.  
+\end{itemize}
+
+\bigskip
+
+\emph{Indications.}
+\begin{itemize}
+  \item Comme d'habitude Scratch part de $(0,0)$ orienté vers la droite, stylo en position d'écriture.
+  
+  \item Il est important de faire patienter Scratch (par exemple $0.2$ seconde) après avoir exécuté une instruction
+  (pour éviter la répétition involontaire des touches tapées).
+   
+\end{itemize}
+
+\bigskip
+
+\textbf{Question.} Quelle suite de lettres dois-tu taper au clavier ?
+Donne la réponse sous forme d'un mot.
+
+
+%\begin{solution}
+%\og \mot{python} \fg{} : un langage informatique moderne et puissant.
+%\end{solution}
+
+\end{enigme}
+
+
+
+\begin{enigme}
+Scratch a dessiné ce parcours en suivant les instructions que l'utilisateur a tapées au clavier :
+
+\centerline{\mot{b c a b s b b i b c i b}}
+
+\myfigure{0.55}{
+\footnotesize  \tikzinput{figure-05-eg3}
+} 
+
+À chacune des cinq lettres : \mot{a b c i s} correspond une instruction.
+
+Le problème est qu'il a oublié la correspondance entre les lettres et les instructions que voici :
+\begin{itemize}
+  \item 1\iere{} instruction : avancer Scratch de $50$,
+  \item 2\ieme{} instruction : tourner Scratch de $30$\textdegree\ vers la droite,  
+  \item 3\ieme{} instruction : tourner Scratch de $30$\textdegree\ vers la gauche,  
+  \item 4\ieme{} instruction : tourner Scratch de $60$\textdegree\ vers la droite,   
+  \item 5\ieme{} instruction : augmenter la taille du stylo.  
+\end{itemize}
+
+\bigskip
+
+\emph{Indications.}
+Encore une fois, Scratch part de la position $(0,0)$ et est orienté vers la droite ($90$\textdegree), stylo en position d'écriture.
+
+
+Quelle est la lettre associée à la première instruction (parmi \mot{a}, \mot{b}, \mot{c}, \mot{i}, \mot{s}),
+la deuxième... ? %(parmi les mêmes touches)
+
+\bigskip
+
+\textbf{Question.} Quel mot (anglais) de cinq lettres est formé en juxtaposant les cinq lettres dans l'ordre des instructions ?
+
+
+%\begin{solution}
+%\og \mot{basic} \fg{} : un ancien langage informatique facile à apprendre.
+%\end{solution}
+
+
+\end{enigme}
+
+
+
+\end{document}
+

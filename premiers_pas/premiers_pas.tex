@@ -1,0 +1,209 @@
+\documentclass[class=report,crop=false, 12pt]{standalone}
+\usepackage[screen]{../myscratch}
+
+\begin{document}
+
+\titre[F]{Premiers pas}
+%===============================
+
+
+
+\begin{activite}[Comme une machine]
+Commençons par un petit jeu : une personne doit faire tracer à d'autres un dessin bien précis.
+Pour jouer, il faut :
+\begin{itemize}
+  \item un \emph{programmeur}, il choisit un dessin et il donne des instructions uniquement à l'oral,
+  
+  \item une ou plusieurs personnes qui jouent le rôle d'\emph{ordinateur}, elles doivent reproduire le dessin sans jamais l'avoir vu, juste en écoutant les instructions.
+  
+\end{itemize}
+
+
+Le jeu se joue en trois phases, du plus facile au plus difficile. 
+
+\bigskip
+
+\textbf{Première phase.}
+
+Le programmeur donne ses instructions (qu'il peut répéter). 
+Les dessinateurs peuvent poser des questions, auxquelles 
+le programmeur répond par oui ou non uniquement. Le programmeur peut voir ce qui est dessiné, 
+mais ne peut rien montrer.
+
+Quand tout le monde a fini son dessin, on compare avec le modèle. Puis on passe à un autre dessin.
+
+\bigskip
+
+\emph{Indications.} Le programmeur doit être le plus clair et le plus précis possible ! Il peut s'aider d'un quadrillage. 
+
+\bigskip
+
+\textbf{Deuxième phase.}
+
+Le programmeur ne voit plus ce que font les dessinateurs. Il répond par oui ou non aux questions.
+
+\bigskip
+
+\textbf{Troisième phase.}
+
+Le programmeur ne voit toujours pas ce que font les dessinateurs mais en plus il ne répond plus aux questions.
+
+\bigskip
+\bigskip
+
+Voici quelques idées de dessins à tracer.
+\myfigure{1}{
+  \tikzinput{intro01}
+} 
+
+\end{activite}
+
+
+\begin{activite}
+
+Tu te déplaces sur des cases en suivant des instructions Nord, Sud, Est et Ouest.
+Pour savoir quelle sera la case suivante, regardes l'instruction écrite dans la case sur laquelle tu te trouves :
+\begin{itemize}
+  \item si tu es sur une case \mot{N}, ta prochaine case sera celle située juste au Nord, % de la case sur laquelle tu te trouves,
+  \item si tu es sur une case \mot{S}, tu te déplaceras d'une case vers le Sud,
+  \item pour un case \mot{E}, tu te déplaceras vers l'Est,
+  \item pour une case \mot{O}, tu te déplaceras vers l'Ouest.
+\end{itemize}
+
+\medskip
+
+\begin{enumerate}
+  \item
+  \begin{enumerate}
+    \item  Pars de la case A1 (en bas à gauche) et suis les instructions. Arrête-toi lorsqu'une instruction t'amène à te déplacer sur une case qui n'est pas dans la grille. Quelle sera ta position avant de quitter la grille ? (Le début du chemin est déjà tracé.)
+\medskip    
+    
+\myfigure{0.950}{
+  \tikzinput{pas01}
+}     
+    
+    \item Repars de la case E1 sur cette nouvelle grille. Où vas-tu arriver ?  
+\medskip    
+      
+\myfigure{0.950}{
+  \tikzinput{pas02}
+} 
+     
+  \end{enumerate} 
+   
+  \item
+  \begin{enumerate}
+    \item Pars de la case A6 et suis les instructions suivantes. Quelle sera ta case d'arrivée ?
+    
+    \centerline{\mot{S E S E E N E E S S S O O S}}
+\medskip    
+    
+\myfigure{0.950}{
+  \tikzinput{pas03}
+}    
+      
+    \item Même question en partant de la case D4 avec les instructions : 
+    
+    \centerline{\mot{O N N E E E S S S O S O O O N}}
+\medskip    
+    
+\myfigure{0.950}{
+  \tikzinput{pas04}
+}          
+    
+  \end{enumerate} 
+ 
+  
+  \item
+  \begin{enumerate}
+    \item Écris les instructions qui permettent de parcourir le chemin tracé de la case A1 à la case E6 (figure de gauche ci-dessous).
+%\smallskip
+\medskip    
+  
+\myfigure{0.950}{
+  \tikzinput{pas05}
+  \quad 
+  \tikzinput{pas05bis}
+}
+     
+    \item Idem pour le chemin de la case D1 à E1 (figure de droite ci-dessus). 
+
+
+
+
+  \end{enumerate}   
+\end{enumerate}
+
+
+
+\end{activite}
+
+
+
+\begin{activite}
+On organise une chasse au trésor. 
+On part d'une case avec une flèche et on suit un premier bloc d'instructions :
+\begin{itemize}
+  \item \mot{A} pour avancer d'une case (dans la direction de la flèche), 
+  \item \mot{D} pour se déplacer d'une case vers la droite,
+  \item \mot{G} pour se déplacer d'une case vers la gauche.
+\end{itemize}
+À la fin du premier un bloc d'instuctions, soit on est à nouveau sur une case contenant une flèche et on aborde un nouveau bloc d'instructions (la chasse au trésor continue), soit on a trouvé le trésor.
+
+Voici un exemple. À l'aide de la carte, partant de la case A2 et en suivant les instructions \mot{AAG} puis \mot{AAGG}, il faut trouver l'endroit où se cache le trésor. 
+\myfigure{1.50}{
+\tikzinput{pas06bis}
+}
+
+\begin{itemize}
+  \item On démarre de la case A2, avec une flèche qui pointe vers la droite.
+  \item Premier bloc d'instructions \mot{AAG} : on avance de deux cases (dans la direction indiquée par la flèche), puis on se déplace d'une case vers la gauche (toujours par rapport à la flèche). On se retrouve donc sur la case C3.
+  \item Second bloc d'instructions \mot{AAGG} : on avance de deux cases (dans la direction de la flèche de la case C3), puis deux cases vers la gauche. Le trésor se trouve donc en case E1. 
+\end{itemize}
+
+\myfigure{1.50}{
+\tikzinput{pas06}
+}
+
+
+\begin{enumerate}
+  \item On part de la case A2 et on suit les instructions :
+
+\centerline{\mot{AAG \quad AAD \quad AD \quad AAD \quad AAG \quad AAGG \quad AAG}}  
+
+Où est le trésor ?
+  
+\myfigure{1.35}{
+\tikzinput{pas07}
+}  
+  
+  \item On part de la case D4 et on suit les instructions :
+
+\centerline{\mot{AD \quad ADD \quad AGG \quad AAGG \quad AAA \quad AAAD \quad AGG \quad AD \quad AAD}}  
+
+Où est le trésor ?
+  
+\myfigure{1.35}{
+\tikzinput{pas08}
+}
+  
+  
+  \item Partant de la case H3, trouve des instructions qui mènent au trésor en B5. Attention ! chaque instruction ne peut pas contenir plus de 4 lettres (par exemple \mot{AG}, \mot{AAAG}, \mot{AAGG} sont autorisées, mais pas \mot{AAAGG}).
+  
+\myfigure{1.35}{
+\tikzinput{pas09}
+}  
+  \item Même question en partant de la case B3 pour atteindre le trésor en I5.
+  
+\myfigure{1.35}{
+\tikzinput{pas10}
+}  
+\end{enumerate}
+
+
+\end{activite}
+
+
+\end{document}
+
+

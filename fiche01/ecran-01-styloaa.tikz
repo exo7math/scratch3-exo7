@@ -1,0 +1,11 @@
+﻿\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height=3cm]{ecran-01-styloa.png}};
+
+\begin{scope}[x={(image.south east)},y={(image.north west)}]
+  \coordinate (A) at (0.02,0.05);
+  \coordinate (B) at (0.3,0.3);
+  \draw[->,>=latex,line width=4pt,red] (B) to[bend right] (A);
+  \end{scope}
+
+
+\end{tikzpicture} 

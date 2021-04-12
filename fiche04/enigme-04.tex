@@ -1,0 +1,152 @@
+\documentclass[class=report,crop=false, 12pt]{standalone}
+\usepackage[screen]{../myscratch}
+
+\begin{document}
+
+
+\titre[E]{Si ... alors ...}
+%===============================
+
+
+\begin{enigme}
+\sauteligne
+
+\begin{itemize}
+  \item Scratch part de la position $x=-200$, $y=0$.
+  \item Scratch s'oriente à $80$\textdegree\ (par rapport au Nord).
+  \item Ensuite, il répète indéfiniment les instructions :
+    \begin{itemize}
+      \item avancer de 5,
+      \item si $x > y$, alors afficher $x$ et s'arrêter.
+    \end{itemize}
+\end{itemize}
+
+\bigskip
+
+\textbf{Question.} Quelle est la première valeur de $x$ affichée ?
+Arrondis la valeur de $x$ à l'entier inférieur.
+
+
+%\begin{solution}
+%$x=46,20$ donc la réponse est $46$ ou $47$.
+%\end{solution}
+
+\end{enigme}
+
+
+\begin{enigme}
+
+
+Scratch se déplace en fonction des touches de flèches pressées.
+Il part de la position $x=0$, $y=0$ et est orienté vers la droite.
+
+\begin{itemize}
+  \item Si la flèche droite ($\rightarrow$) est pressée, alors Scratch avance de $30$
+  (et attend $0.2$ seconde).
+  \item Si la flèche haut ($\uparrow$) est pressée, alors Scratch tourne de $15$\textdegree\  vers la gauche (et attend $0.2$ seconde).  
+\end{itemize}
+
+Programme Scratch afin qu'il suive ces consignes.
+
+\bigskip
+
+Voici la séquence d'instructions saisie par un élève :
+
+{\Large
+$$\rightarrow \quad \rightarrow \quad \uparrow \quad \rightarrow \quad \uparrow \quad \rightarrow \quad \uparrow \quad \uparrow \quad \rightarrow \quad 
+\rightarrow \quad \rightarrow \quad \uparrow \quad \rightarrow $$
+}
+
+\bigskip
+
+\textbf{Question.} Quelle est la valeur de l'abscisse $x$ de la position de Scratch à la fin de ces instructions ?
+Arrondis la réponse à l'entier inférieur.
+
+%\begin{solution}
+%$x=167,72$ donc la réponse est $167$ ou $168$.
+%\end{solution}
+
+\end{enigme}
+
+
+
+\begin{enigme}
+
+Scratch avance si certaines conditions sont validées.
+
+\medskip
+
+\begin{minipage}{0.49\textwidth}
+\begin{itemize}
+  \item Si \og{}$2<3$\fg{}, alors Scratch avance de $30$.
+  
+\vspace*{6ex}  
+  
+  \item Si \og{}$2+3=4$\fg{}, alors Scratch avance de $40$.
+  
+\vspace*{6ex}    
+  
+  \item Si \og{}$2 \times 3 > 7$ \textbf{ou} $9-5 > 3$\fg{}, alors Scratch avance de $50$. 
+  
+\vspace*{6ex}    
+     
+  \item Si \og{}\textbf{non} ($3 \times 4 = 12$)\fg{}, alors Scratch avance de $60$. 
+\end{itemize}   
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+\begin{center}
+\setscratch{scale=0.6}
+
+\begin{scratch}
+  \blockif{si \booloperator{\ovalnum{2} < \ovalnum{3}} alors  }
+  { 
+    \blockmove{avancer de \ovalnum{30} pas}
+  }
+
+  \blockspace[0.5]
+
+  \blockif{si \booloperator{\ovaloperator{\ovalnum{2} + \ovalnum{3}} = \ovalnum{4}} alors  }
+  { 
+    \blockmove{avancer de \ovalnum{40} pas}
+  }
+
+  \blockspace[0.5]
+
+  \blockif{si \booloperator{
+  \booloperator{\ovaloperator{\ovalnum{2} * \ovalnum{3}} > \ovalnum{7}}
+  ou  
+  \booloperator{\ovaloperator{\ovalnum{9} - \ovalnum{5}} > \ovalnum{3}}
+  }
+  alors  }
+  { 
+    \blockmove{avancer de \ovalnum{50} pas}
+  }
+
+  \blockspace[0.5]
+
+  \blockif{si \booloperator{non \booloperator{\ovaloperator{\ovalnum{3} * \ovalnum{4}} = \ovalnum{12}}} alors  }
+  { 
+    \blockmove{avancer de \ovalnum{60} pas}
+  }
+
+\end{scratch}
+\end{center}
+\end{minipage}
+
+%\medskip
+%Quelles sont les conditions qui seront vérifiées ? Vérifie en programmant Scratch.
+
+\bigskip
+
+\textbf{Question.} Au total, après toutes ces instructions, de combien de pas Scratch a-t-il avancé ?
+
+
+%\begin{solution}
+%Les assertions 1 et 3 sont vraies, donc Scratch avance de $30+50=80$.
+%\end{solution}
+
+\end{enigme}
+
+
+\end{document}
+

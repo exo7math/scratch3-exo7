@@ -1,0 +1,8 @@
+﻿\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height=3cm]{ecran-01-stylob.png}};
+
+\begin{scope}[x={(image.south east)},y={(image.north west)}]
+  \draw[ultra thick,red] (0.31,0.77) ellipse(0.15 and 0.22);
+\end{scope}
+
+\end{tikzpicture} 
