@@ -99,11 +99,9 @@ Livre Scratch3
 Size 7.5 x 9.25 in (190.5mm x 234.9mm)
 
 
-
 Livres > Informatique et internet > Programmation et langages
-Non-fiction > Mathématiques > Général
 
-Code ISBN : 
+Code ISBN : 9798738712784
 Marque éditoriale : Independently published 
 
 
@@ -118,3 +116,8 @@ Absence de fond perdu
 couv brillante
 
 Gabarit couverure https://kdp.amazon.com/fr_FR/cover-templates
+
+
+
+Erreur interieure:Vous avez choisi 7.5" x 9.25" mais votre fichier est au format 7.49" x 9.24"
+
