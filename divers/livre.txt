@@ -28,7 +28,7 @@ Chapitres
 =========
 
 
-Activités Scratch
+Activités Scratch 
 
     Premiers pas
     Répéter
@@ -77,12 +77,26 @@ Scratch 3
 
 Livres Exo7 nb?
 
+Auteurs
+    Exo7
+    Arnaud Bodin
+    Loïc Arsicaud
+    Nathalie Bernard
+    François Recher
+
+Mots-clés 
+    Scratch
+    Algorithme
+    Programmation
+    Collège
+    Mathématiques
+
+Non-fiction > Ordinateurs > Langages de programmation > Général
 
 Livre Scratch3
 225 pages
 
 Size 7.5 x 9.25 in (190.5mm x 234.9mm)
-
 
 
 
