@@ -24,7 +24,7 @@ Les vidéos utilisent la version 2 de Scratch, il peut y avoir des variations d'
 Livre
 =====
 
-Le livre est en vente sur Amazon.fr à prix coûtant. [Commander le livre sur Amazon.fr](https://www.amazon.fr/dp/???).
+Le livre est en vente sur Amazon.fr à prix coûtant. [Commander le livre sur Amazon.fr](https://www.amazon.fr/dp/B092P76LYN).
 
 Vous pouvez aussi le téléchargez sur ce site : [Livre 'Scratch au collège' (4 Mo)](livre-scratch3.pdf).
 
