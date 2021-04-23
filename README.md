@@ -113,6 +113,7 @@ Institutions
 Ce projet est porté par le site Exo7 et l'IREM de Lille. 
 Nous avons bénéficié du soutien de l'université de Lille, de la COMUE Lille Nord de France et d'une bourse Google CS4HS (*Computer Science for High School*).
 
+Ces ressources sont diffusées sous la licence *Creative Commons -- BY-NC-SA -- 4.0 FR*.
 
 ![Logo Exo7](divers/logo_exo7.png "logo Exo7")
 ![Logo IREM](divers/logo-irem-144.png "logo IREM")
